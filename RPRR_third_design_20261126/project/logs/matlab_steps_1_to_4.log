@@ -1,0 +1,89 @@
+Surface: R0 = 390 mm, A = 17.6 mm, H = 448 mm, k = 2.5
+Wall distance from axis: 372 to 408 mm
+One wave is 179 mm tall
+Steepest wall tilt: 31.6 deg on the whole surface, 31.6 deg along the E
+Letter E: 269 mm tall, 161 mm wide (flat), from z = 90 to 359 mm
+Letter E spans 23.7 deg around the axis
+Pen perpendicular to the wall at every point (largest error 1.1e-16)
+Points: spine 37, top 2, middle 2, bottom 2
+Saved step1_E_points.mat and figures/step1_*.png
+Bucket: R0 = 390 mm, A = 17.6 mm, H = 448 mm (from step 1)
+Robot:  h = 225 mm, alpha = 0 deg, L3 = 300 mm, L4 = 50 mm, solution -1
+Reaches 43 of 43 points of the E
+Round trip (inverse -> direct) largest error: 1.2e-13
+Joint ranges over the whole E:
+  q1   -11.9 to    11.9 deg
+  q2    32.8 to    94.6 mm  (slider travel 62 mm)
+  q3   -32.6 to    32.2 deg
+  q4   -63.8 to    64.1 deg
+Rail end at 95 mm from the axis, wall there at 408 mm -> OK
+  top    stroke: q2–q4 change by at most 1.1e-13 (only q1 moves)
+  middle stroke: q2–q4 change by at most 5.7e-14 (only q1 moves)
+  bottom stroke: q2–q4 change by at most 1.4e-13 (only q1 moves)
+Epson C4: shoulder-to-wrist distance 173 to 349 mm (allowed 170 to 500) -> same bucket OK
+Saved step2_robot.mat and figures/step2_*.png
+Tests on 200 random poses (largest error):
+  J vs numerical derivative      2.0e-10
+  Jp vs numerical derivative     5.9e-10
+  inverse -> direct round trip   1.4e-13
+  det(J) = -rho*L3*cos(q3)       5.0e-16
+  velocity inversion             2.6e-14
+  acceleration inversion         7.4e-15
+Along the E: score 1/kappa from 0.29 to 0.34 (0.2 = acceptable, Lez_04 p.23)
+Along the E: q3 stays 57 deg away from the singular +-90 deg
+Along the E: all joints within the limits: true
+Design map: best worst-case score 0.30 at h = 400 mm, alpha = -24 deg (current: 0.29)
+Saved step3_kinematics.mat and figures/step3_*.png
+Coarse search: 7605 combinations in 0.7 s
+  h 100-400 mm step 25 | alpha -30 to 30 deg step 5 | L3 150-350 mm step 25 | L4 50-150 mm step 25
+  rejected: cannot reach the E 4809, slider into the column 2225, rail outside the bucket 7, q4 joint closer than 30 mm to the wall 0
+  buildable: 564
+Current design (robot_params): rank 1 of 564, lowest score 0.24 / 0.29 / 0.25 at Lc = 150 / 250 / 400 mm
+
+Top 10 (ranked by the lowest score over the E and over Lc = 150 / 250 / 400 mm):
+  rank    h  alpha   L3   L4 | score along E (Lc 250) | lowest at Lc 150/250/400 | slider q2 [mm]  | q3 [deg]   | q4 [deg]   | q4 joint to wall
+     1  225      0  300   50 |      0.29 to 0.34      |   0.24 / 0.29 / 0.25   |  33- 95 ( 62) |  -33..  32 |  -64..  64 |  50 mm <- on the edge: L4
+     2  400    -30  300   50 |      0.28 to 0.36      |   0.24 / 0.28 / 0.24   |  33-193 (160) |  -23..  32 |  -34..  85 |  50 mm <- on the edge: h, alpha, L4
+     3  400    -25  300   50 |      0.30 to 0.36      |   0.24 / 0.30 / 0.26   |  32-202 (170) |  -32..  26 |  -33..  88 |  50 mm <- on the edge: h, L4
+     4  100     20  275   50 |      0.27 to 0.35      |   0.23 / 0.27 / 0.23   |  51-193 (142) |  -34..  33 |  -84..  45 |  50 mm <- on the edge: h, L4
+     5  350    -20  275   50 |      0.27 to 0.35      |   0.23 / 0.27 / 0.23   |  51-194 (143) |  -33..  33 |  -45..  85 |  50 mm <- on the edge: L4
+     6  375    -25  275   50 |      0.27 to 0.35      |   0.23 / 0.27 / 0.23   |  55-207 (152) |  -30..  35 |  -41..  86 |  50 mm <- on the edge: L4
+     7  400    -25  275   50 |      0.28 to 0.35      |   0.23 / 0.28 / 0.24   |  58-232 (174) |  -35..  29 |  -36..  92 |  50 mm <- on the edge: h, L4
+     8  225      0  275   50 |      0.27 to 0.33      |   0.22 / 0.27 / 0.23   |  58-125 ( 66) |  -36..  36 |  -67..  68 |  50 mm <- on the edge: L4
+     9  225     -5  300   50 |      0.26 to 0.34      |   0.22 / 0.26 / 0.23   |  33-100 ( 67) |  -26..  39 |  -66..  62 |  50 mm <- on the edge: L4
+    10  225      5  300   50 |      0.26 to 0.34      |   0.22 / 0.26 / 0.23   |  32-101 ( 69) |  -40..  25 |  -62..  66 |  50 mm <- on the edge: L4
+
+Saved step3b_design_search.mat and figures/step3b_*.png
+Stroke order A: TR-TL-ML-MR-ML-BL-BR   (stops: all)
+Letter: 41 via points, 850 mm of path (129 mm drawn twice)
+Home: pen tip 350 mm from the axis, z = 120 mm, pen angle -48 deg; joints q1 -11.9 deg, q2 24.3 mm, q3 -13.1 deg, q4 -34.9 deg
+Pen angle on the arc:  -73 to -32 deg;  on the line: -48 to 32 deg
+
+Times [s] (time_scale 1.00):
+  Home -> letter (arc)     1.97   limited by q4 acceleration
+  letter                   6.57
+  letter -> Home (line)    2.13   limited by q4 acceleration
+  whole cycle             10.67
+
+Letter, three ways of handling the corners (same limits):
+  stops      time [s]  off path [mm] not drawn [mm] into wall [mm] pen tilt [deg]
+  all            5.37           0.84           1.16           0.95         0.25
+  reversals      5.37           1.38           1.84           0.41         0.25
+  none           5.37           1.38          16.83           0.41         0.25
+  off path = farthest the pen tip gets from the ideal letter; not drawn = largest piece of the letter the tip never reaches;
+  into wall = deepest the tip goes past the wall between via points; pen tilt = largest error of "perpendicular to the wall".
+
+Checks on the whole cycle (5339 samples):
+  joints inside their limits: yes
+  q2 1.9 to 94.6 mm (limits 0 to 141);  q3 -32.6 to 32.6 deg (+-45);  q4 -81.0 to 64.1 deg (+-131)
+  largest speed / limit:        q1 0.82, q2 0.47, q3 0.22, q4 0.45
+  largest acceleration / limit: q1 0.67, q2 0.67, q3 0.67, q4 0.67
+  arm (q3 link and pen body) closest to the wall: 24.7 mm;  lowest point above the floor: 63.5 mm
+  pen tip between Home and the letter: deepest past the wall 0.000 mm (must be ~0)
+  pen tip to wall, 10 / 20 mm before the first letter point: 4.9 / 9.3 mm;  10 / 20 mm after the last: 4.3 / 8.7 mm
+  pen tip strays from the ideal arc by at most 0.02 mm, from the ideal line by at most 0.03 mm
+  starts and ends at Home (2.8e-14 mm apart), at rest (2.2e-13)
+  largest joint step between samples: 4.90e-03 rad, 2.80e-01 mm (no jumps)
+  spline function vs MATLAB spline(): 1.4e-14
+
+Saved step4_trajectory.mat and figures/step4_*.png

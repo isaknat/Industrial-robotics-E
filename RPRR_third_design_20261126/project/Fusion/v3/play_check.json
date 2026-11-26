@@ -1,0 +1,512 @@
+{
+ "started": true,
+ "play": {
+  "source_samples": 5339,
+  "duration_s": 10.674299078493162,
+  "displayed_frames": 259,
+  "max_tcp_error_mm": 2.1390168887322674e-13
+ },
+ "samples": [
+  {
+   "t": 0.0,
+   "q": [
+    -0.207,
+    0.02432,
+    -0.22812,
+    -0.60964
+   ],
+   "turn_deg": {
+    "q1_input": 126.99,
+    "q1_intermediate": -88.95,
+    "q3_input": 168.61,
+    "q3_intermediate": -98.03,
+    "q4_transfer": -82.93,
+    "q4_carrier": -39.21,
+    "q4_input": 111.21,
+    "q2_screw": -155.35
+   }
+  },
+  {
+   "t": 0.445,
+   "q": [
+    -0.207,
+    0.0099,
+    -0.10189,
+    -1.00178
+   ],
+   "turn_deg": {
+    "q1_input": 126.99,
+    "q1_intermediate": -88.95,
+    "q3_input": 113.71,
+    "q3_intermediate": -43.79,
+    "q4_transfer": -120.63,
+    "q4_carrier": -17.51,
+    "q4_input": -1.9,
+    "q2_screw": 3.47
+   }
+  },
+  {
+   "t": 0.89,
+   "q": [
+    -0.207,
+    0.00237,
+    0.17066,
+    -1.4121
+   ],
+   "turn_deg": {
+    "q1_input": 126.99,
+    "q1_intermediate": -88.95,
+    "q3_input": 52.5,
+    "q3_intermediate": 73.33,
+    "q4_transfer": -152.04,
+    "q4_carrier": 29.33,
+    "q4_input": -96.11,
+    "q2_screw": -85.21
+   }
+  },
+  {
+   "t": 1.334,
+   "q": [
+    -0.207,
+    0.042,
+    0.44228,
+    -1.39839
+   ],
+   "turn_deg": {
+    "q1_input": 126.99,
+    "q1_intermediate": -88.95,
+    "q3_input": -10.94,
+    "q3_intermediate": -169.94,
+    "q4_transfer": -134.9,
+    "q4_carrier": 76.02,
+    "q4_input": -44.71,
+    "q2_screw": -72.01
+   }
+  },
+  {
+   "t": 1.779,
+   "q": [
+    -0.207,
+    0.09186,
+    0.56695,
+    -1.24305
+   ],
+   "turn_deg": {
+    "q1_input": 126.99,
+    "q1_intermediate": -88.95,
+    "q3_input": -69.6,
+    "q3_intermediate": -116.37,
+    "q4_transfer": -109.96,
+    "q4_carrier": 97.45,
+    "q4_input": 30.12,
+    "q2_screw": -66.92
+   }
+  },
+  {
+   "t": 2.224,
+   "q": [
+    0.19237,
+    0.09362,
+    0.56247,
+    -1.1136
+   ],
+   "turn_deg": {
+    "q1_input": -168.9,
+    "q1_intermediate": 82.67,
+    "q3_input": -80.42,
+    "q3_intermediate": -118.3,
+    "q4_transfer": -95.38,
+    "q4_carrier": 96.68,
+    "q4_input": 73.85,
+    "q2_screw": -130.35
+   }
+  },
+  {
+   "t": 2.669,
+   "q": [
+    0.207,
+    0.06454,
+    0.46256,
+    -0.89082
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": 38.08,
+    "q3_intermediate": -161.23,
+    "q4_transfer": -75.58,
+    "q4_carrier": 79.51,
+    "q4_input": 133.27,
+    "q2_screw": -163.29
+   }
+  },
+  {
+   "t": 3.113,
+   "q": [
+    0.207,
+    0.04128,
+    0.34581,
+    -0.47668
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": 115.88,
+    "q3_intermediate": 148.6,
+    "q4_transfer": -34.81,
+    "q4_carrier": 59.44,
+    "q4_input": -104.43,
+    "q2_screw": -46.05
+   }
+  },
+  {
+   "t": 3.558,
+   "q": [
+    0.207,
+    0.03287,
+    0.23066,
+    -0.02333
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": -162.45,
+    "q3_intermediate": 99.12,
+    "q4_transfer": 10.54,
+    "q4_carrier": 39.65,
+    "q4_input": 31.63,
+    "q2_screw": -103.42
+   }
+  },
+  {
+   "t": 4.003,
+   "q": [
+    0.207,
+    0.03896,
+    0.12115,
+    0.363
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": -67.16,
+    "q3_intermediate": 52.06,
+    "q4_transfer": 48.54,
+    "q4_carrier": 20.82,
+    "q4_input": 145.61,
+    "q2_screw": 37.42
+   }
+  },
+  {
+   "t": 4.448,
+   "q": [
+    0.207,
+    0.05555,
+    0.01289,
+    0.44005
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": 31.15,
+    "q3_intermediate": 5.54,
+    "q4_transfer": 51.16,
+    "q4_carrier": 2.22,
+    "q4_input": 153.49,
+    "q2_screw": 160.33
+   }
+  },
+  {
+   "t": 4.892,
+   "q": [
+    0.207,
+    0.05757,
+    -0.00326,
+    0.08672
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": -7.88,
+    "q3_intermediate": -1.4,
+    "q4_transfer": 9.75,
+    "q4_carrier": -0.56,
+    "q4_input": 29.25,
+    "q2_screw": 87.65
+   }
+  },
+  {
+   "t": 5.337,
+   "q": [
+    -0.05964,
+    0.05755,
+    -0.0025,
+    0.0025
+   ],
+   "turn_deg": {
+    "q1_input": -170.85,
+    "q1_intermediate": -25.63,
+    "q3_input": -6.04,
+    "q3_intermediate": -1.07,
+    "q4_transfer": 0.14,
+    "q4_carrier": -0.43,
+    "q4_input": 0.43,
+    "q2_screw": 88.17
+   }
+  },
+  {
+   "t": 5.782,
+   "q": [
+    0.207,
+    0.05748,
+    -0.00238,
+    -0.2306
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": -5.75,
+    "q3_intermediate": -1.02,
+    "q4_transfer": -26.56,
+    "q4_carrier": -0.41,
+    "q4_input": -79.68,
+    "q2_screw": 90.58
+   }
+  },
+  {
+   "t": 6.227,
+   "q": [
+    0.207,
+    0.05043,
+    -0.05032,
+    -0.49107
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": -121.64,
+    "q3_intermediate": -21.62,
+    "q4_transfer": -59.16,
+    "q4_carrier": -8.65,
+    "q4_input": -177.47,
+    "q2_screw": -15.57
+   }
+  },
+  {
+   "t": 6.671,
+   "q": [
+    0.207,
+    0.03536,
+    -0.16566,
+    -0.23228
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": -40.43,
+    "q3_intermediate": -71.19,
+    "q4_transfer": -36.11,
+    "q4_carrier": -28.47,
+    "q4_input": -108.33,
+    "q2_screw": 167.12
+   }
+  },
+  {
+   "t": 7.116,
+   "q": [
+    0.207,
+    0.03467,
+    -0.27719,
+    0.19094
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": 49.98,
+    "q3_intermediate": -119.12,
+    "q4_transfer": 6.0,
+    "q4_carrier": -47.65,
+    "q4_input": 17.99,
+    "q2_screw": -168.1
+   }
+  },
+  {
+   "t": 7.561,
+   "q": [
+    0.207,
+    0.04885,
+    -0.39363,
+    0.64215
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": 128.53,
+    "q3_intermediate": -169.15,
+    "q4_transfer": 51.03,
+    "q4_carrier": -67.66,
+    "q4_input": 153.09,
+    "q2_screw": 41.25
+   }
+  },
+  {
+   "t": 8.006,
+   "q": [
+    0.207,
+    0.07691,
+    -0.51051,
+    1.01301
+   ],
+   "turn_deg": {
+    "q1_input": -126.99,
+    "q1_intermediate": 88.95,
+    "q3_input": -153.98,
+    "q3_intermediate": 140.63,
+    "q4_transfer": 86.83,
+    "q4_carrier": -87.75,
+    "q4_input": -99.5,
+    "q2_screw": 111.1
+   }
+  },
+  {
+   "t": 8.45,
+   "q": [
+    -0.12107,
+    0.09457,
+    -0.56839,
+    1.11952
+   ],
+   "turn_deg": {
+    "q1_input": 13.16,
+    "q1_intermediate": -52.03,
+    "q3_input": 66.11,
+    "q3_intermediate": 115.75,
+    "q4_transfer": 95.72,
+    "q4_carrier": -97.7,
+    "q4_input": -72.84,
+    "q2_screw": -164.61
+   }
+  },
+  {
+   "t": 8.895,
+   "q": [
+    -0.207,
+    0.07925,
+    -0.5195,
+    0.84194
+   ],
+   "turn_deg": {
+    "q1_input": 126.99,
+    "q1_intermediate": -88.95,
+    "q3_input": -175.72,
+    "q3_intermediate": 136.76,
+    "q4_transfer": 66.71,
+    "q4_carrier": -89.3,
+    "q4_input": -159.86,
+    "q2_screw": 26.95
+   }
+  },
+  {
+   "t": 9.34,
+   "q": [
+    -0.207,
+    0.0558,
+    -0.43841,
+    0.47023
+   ],
+   "turn_deg": {
+    "q1_input": 126.99,
+    "q1_intermediate": -88.95,
+    "q3_input": 20.29,
+    "q3_intermediate": 171.61,
+    "q4_transfer": 28.77,
+    "q4_carrier": -75.36,
+    "q4_input": 86.3,
+    "q2_screw": 151.11
+   }
+  },
+  {
+   "t": 9.785,
+   "q": [
+    -0.207,
+    0.03523,
+    -0.35284,
+    0.0948
+   ],
+   "turn_deg": {
+    "q1_input": 126.99,
+    "q1_intermediate": -88.95,
+    "q3_input": -132.88,
+    "q3_intermediate": -151.62,
+    "q4_transfer": -9.35,
+    "q4_carrier": -60.65,
+    "q4_input": -28.06,
+    "q2_screw": 171.85
+   }
+  },
+  {
+   "t": 10.23,
+   "q": [
+    -0.207,
+    0.02334,
+    -0.27815,
+    -0.26947
+   ],
+   "turn_deg": {
+    "q1_input": 126.99,
+    "q1_intermediate": -88.95,
+    "q3_input": 47.67,
+    "q3_intermediate": -119.53,
+    "q4_transfer": -46.82,
+    "q4_carrier": -47.81,
+    "q4_input": -140.45,
+    "q2_screw": -120.16
+   }
+  },
+  {
+   "t": 10.674,
+   "q": [
+    -0.207,
+    0.02432,
+    -0.22812,
+    -0.60964
+   ],
+   "turn_deg": {
+    "q1_input": 126.99,
+    "q1_intermediate": -88.95,
+    "q3_input": 168.61,
+    "q3_intermediate": -98.03,
+    "q4_transfer": -82.93,
+    "q4_carrier": -39.21,
+    "q4_input": 111.21,
+    "q2_screw": -155.35
+   }
+  }
+ ],
+ "largest_angle_error_deg": 1.7053025658242404e-13,
+ "largest_deviation_from_pure_rotation_mm": 1.5987211554602254e-13,
+ "largest_screw_off_axis_mm": 8.595628868356079e-14,
+ "largest_tip_error_mm": 1.6110097386971714e-13,
+ "trajectory_range": [
+  [
+   -0.20699999999999993,
+   0.20699999999999982
+  ],
+  [
+   0.0019058719281961512,
+   0.09457250012013722
+  ],
+  [
+   -0.5683887950787003,
+   0.5689765357304437
+  ],
+  [
+   -1.4139792049062845,
+   1.1195176161247684
+  ]
+ ],
+ "back_at_reference": {
+  "deviation_mm": 7.105427357601002e-14,
+  "pending_position": false
+ }
+}

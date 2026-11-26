@@ -1,0 +1,194 @@
+{
+ "poses": [
+  {
+   "q": [
+    0,
+    80,
+    0,
+    0
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    141,
+    0,
+    0
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    141,
+    45,
+    -90
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    115,
+    -42,
+    90
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    60,
+    -42,
+    0
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    100,
+    45.5,
+    0
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    100,
+    -42.5,
+    0
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    70,
+    20,
+    0
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    90,
+    20,
+    20,
+    -45
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    -90,
+    80,
+    0,
+    0
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    -11.9,
+    24.3,
+    -13.1,
+    -34.9
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    80,
+    0,
+    131
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    80,
+    0,
+    -131
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    45,
+    100,
+    30,
+    -60
+   ],
+   "collisions": {}
+  },
+  {
+   "q": [
+    0,
+    20,
+    30,
+    -60
+   ],
+   "collisions": {}
+  }
+ ],
+ "touch_nothing": [
+  "D_Q4_Pen_return_spring"
+ ],
+ "supports_touch": {
+  "D_Q3_Motor_support": [
+   "D_M4x75_button_screw",
+   "D_Motor_flange",
+   "D_Q3_Drive_cheek"
+  ],
+  "D_Q4_Motor_support": [
+   "D_Motor_flange",
+   "D_Q4_Motor_bracket"
+  ],
+  "D_Q3_Input_shaft": [
+   "D_Bearing_626",
+   "D_GT3M_16T_W9_D6",
+   "D_Retaining_ring_6",
+   "D_Set_screw_M3x5",
+   "D_XGT2_19C_8x6"
+  ],
+  "D_Retaining_ring_6": [
+   "D_Bearing_626",
+   "D_Q1_Adjustable_idler_axle",
+   "D_Q1_Input_shaft",
+   "D_Q1_Intermediate_shaft",
+   "D_Q1_Stage1_adjuster",
+   "D_Q3_First_stage_idler_axle",
+   "D_Q3_Input_shaft",
+   "D_Q3_Second_stage_idler_axle",
+   "D_Q4_Input_shaft_v3",
+   "D_Q4_Long_idler_pin"
+  ]
+ },
+ "timeline": 1345,
+ "not_healthy": [],
+ "kinds": 106,
+ "instances": 196,
+ "masses_kg": {
+  "D_01": 5.5727,
+  "D_02": 2.8431,
+  "D_03": 2.6124,
+  "D_04": 0.8401,
+  "D_05": 0.067,
+  "Wave": 4.7843
+ },
+ "export": true
+}

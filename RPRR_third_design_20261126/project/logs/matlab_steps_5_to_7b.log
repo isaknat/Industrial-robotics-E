@@ -1,0 +1,154 @@
+Dynamic model: 6 point masses + J1; payload 1.0 kg; trajectory of step 4 (10.67 s, 5339 samples)
+Masses [kg]: slider 2.612, q3 body (link, long belt, q3 pulley) 0.772, pen head 0.067, payload 1.00; J1 = 0.0542 kg m^2
+   source: Fusion\v3\step7_bodies\mass_properties.json
+
+Tests (largest error):
+  extended Jacobian vs differences of the positions   1.4e-10
+  its time derivative vs differences of the Jacobian  2.0e-10
+  at rest at Home: joints vs weight x lever arm       8.9e-16   (q3 holds 3.89 N m, q4 0.329 N m)
+  payload and time-scale shortcut vs direct run       3.6e-15
+  work of the joints vs change of energy              1.6e-02 J  (energy varies by 4.13 J over the cycle)
+  RMS check and tau range of the slides agree:        yes
+
+What the joints must deliver (payload 1.0 kg):
+  joint                  peak        RMS  weight part    moving part
+  q1 (base turn)     4.999 N m  1.499 N m    0.000 N m      4.999 N m
+  q2 (slider)       12.449 N    1.589 N      0.000 N       12.449 N  
+  q3                 7.303 N m  3.669 N m    4.147 N m      3.242 N m
+  q4 (pen angle)     0.863 N m  0.431 N m    0.492 N m      0.428 N m
+
+Load factor beta of each joint and accelerating factor alpha of each motor [W/s]:
+  beta:  q1 36.3, q2 2.05, q3 12.4, q4 3.85
+  alpha: HG-KR053 5689   HG-MR053 15802   HG-KR13 13179   HG-MR13 34133   HG-KR23 18534   HG-MR23 47353   
+
+Choice (smallest motor with a ratio we can build, using at most 80% of its torque; fixed by us: q1, q2, q3, q4):
+  joint            motor     ratio                  RMS/rated  peak/max speed/max  motor speed
+  q1 (base turn)   HG-KR053  1:50                        0.20      0.19      0.19     1170 r/min
+  q2 (slider)      HG-KR053  10 mm per motor turn        0.02      0.05      0.14      841 r/min
+  q3               HG-KR053  1:42                        0.54      0.30      0.04      268 r/min
+  q4 (pen angle)   HG-KR053  1:6                         0.45      0.26      0.01       60 r/min
+  usable range of tau from the slides for the chosen motor, and tau_opt:
+    q1: 1:5858 to 1:9.4 (best 1:234; speed allows up to 1:257)
+    q2: 0.06 to 633 mm per turn (best 6.15; speed needs at least 1.40)
+    q3: 1:22382 to 1:22.9 (best 1:716; speed allows up to 1:946)
+    q4: 1:7963 to 1:2.7 (best 1:146; speed allows up to 1:603)
+  least reduction each motor needs to pass the RMS check at 100% of its rated torque (- = cannot):
+             KR053     MR053      KR13      MR13      KR23      MR23
+    q1       1:9.4     1:9.4     1:4.7     1:4.7     1:2.3     1:2.3
+    q2      633 mm    633 mm   1265 mm   1265 mm   2530 mm   2530 mm
+    q3      1:22.9    1:22.9    1:11.5    1:11.5     1:5.7     1:5.7
+    q4       1:2.7     1:2.7     1:1.3     1:1.3     1:0.7     1:0.7
+
+What these motors could give at the joints (rated speed; 80% of maximum torque minus the weight, largest inertia):
+  speed:        q1 6.3 rad/s, q2 500 mm/s, q3 7.4 rad/s, q4 52.4 rad/s      (step 4 uses 3, 300, 3, 3)
+  acceleration: q1 86 rad/s^2, q2 45194 mm/s^2, q3 114 rad/s^2, q4 823 rad/s^2   (step 4 uses 30, 3000, 30, 30)
+
+Payload and cycle time with these motors (the same path, played faster or slower):
+  payload    at the cycle time of step 4        shortest cycle that passes every check
+   0.2 kg    largest use 0.19 (q1)                   3.4 s   limited by q1 RMS torque
+   0.4 kg    largest use 0.28 (q3)                   3.8 s   limited by q1 RMS torque
+   0.6 kg    largest use 0.37 (q3)                   4.2 s   limited by q1 RMS torque
+   0.8 kg    largest use 0.45 (q3)                   4.4 s   limited by q1 RMS torque
+   1.0 kg    largest use 0.54 (q3)                   4.8 s   limited by q1 RMS torque
+
+Saved step5_dynamics.mat and figures/step5_*.png
+q3 compared for payloads 0.2 to 1.0 kg on the step 4 trajectory (10.67 s); margin: at most 80% of rated and maximum torque
+
+option                     q3 motor   reduction RMS/rated at 0.2-1 kg  peak/max at 0.2-1 kg   q3 holds up to       shortest cycle at 0.2 / 1 kg
+A: 50 W motor              HG-KR053   1:30      0.27 to 0.76            0.14 to 0.41            3.90 N m          3.4 / 5.3 s
+B: 100 W motor             HG-KR13    1:15      0.27 to 0.76            0.14 to 0.42            3.90 N m          3.4 / 5.3 s
+C: 50 W motor + spring     HG-KR053   1:12      0.10 to 0.70            0.29 to 0.66            1.42 N m          4.4 / 8.1 s
+
+Other joints (motors and ratios of step 5), largest use over all payloads [RMS/rated, peak/max]:
+  A: 50 W motor              q1 0.20, 0.19   q2 0.02, 0.05   q4 0.45, 0.26   (slider carries +0.00 kg)
+  B: 100 W motor             q1 0.20, 0.19   q2 0.02, 0.05   q4 0.45, 0.26   (slider carries +0.20 kg)
+  C: 50 W motor + spring     q1 0.20, 0.19   q2 0.02, 0.05   q4 0.45, 0.26   (slider carries +0.00 kg)
+
+Spring of option C: k*b*c = 2.48 N m, balanced exactly for a 0.6 kg payload
+  example: b = 40 mm, c = 60 mm -> k = 1.03 N/mm; spring length 20 to 100 mm, force up to 103 N
+  the formula assumes a spring whose force is k times its full length (zero free length)
+  torque q3 still has to hold with the spring: 1.16 N m at 0.2 kg   0.56 N m at 0.4 kg   0.15 N m at 0.6 kg   0.79 N m at 0.8 kg   1.42 N m at 1.0 kg   
+
+Saved step5b_q3_options.mat and figures/step5b_q3_options.png
+Simscape model robot_rprr.slx: 4 joints, J1 and 6 point masses; trajectory of step 4 (10.67 s, 5339 samples)
+
+Pen tip, Simscape against RPRRdir: largest distance 3.74e-13 mm
+
+Joint loads, Simscape against the MATLAB model (RPRRdyn):
+  payload  joint       peak (MATLAB) largest difference       relative
+   1.0 kg  q1               4.999 N m     8.88e-15 N m      1.8e-15
+   1.0 kg  q2              12.449 N       1.24e-14 N        1.0e-15
+   1.0 kg  q3               7.303 N m     4.44e-15 N m      6.1e-16
+   1.0 kg  q4               0.863 N m     4.44e-16 N m      5.1e-16
+   0.2 kg  q1               2.464 N m     4.00e-15 N m      1.6e-15
+   0.2 kg  q2               8.566 N       7.99e-15 N        9.3e-16
+   0.2 kg  q3               2.330 N m     1.33e-15 N m      5.7e-16
+   0.2 kg  q4               0.175 N m     8.33e-17 N m      4.8e-16
+
+Saved robot_rprr.slx, step7_simscape.mat and figures/step7_torques.png
+  pose check 1, trial 1: 1 s
+  pose check 1, trial 2: 1 s
+  pose check 2, trial 1: 1 s
+  pose check 2, trial 2: 1 s
+  pose check 3, trial 1: 1 s
+  pose check 3, trial 2: 1 s
+  simulation 1 of 3 (payload 1.0 kg, gravity on): 1 s
+  simulation 2 of 3 (payload 0.2 kg, gravity on): 1 s
+  simulation 3 of 3 (payload 1.0 kg, gravity off): 1 s
+Simscape model robot_rprr_cad.slx: CAD bodies D_02-D_05 (Fusion), payload at the pen tip, one equivalent rotor per drive
+Trajectory of step 4: 10.67 s, 5339 samples
+
+Equivalent rotor of each drive, at the motor speed [kg m^2] (transmission parts from Fusion):
+  joint motor       rotor J_m  transmission       total  x rotor seen at the joint (J n^2)
+  q1    HG-KR053    4.500e-06     8.643e-06   1.314e-05     2.92   0.0329 (rotor 0.0112)
+  q2    HG-KR053    4.500e-06     3.735e-06   8.235e-06     1.83   3.25 kg (rotor 1.78 kg)
+  q3    HG-KR053    4.500e-06     4.780e-06   9.280e-06     2.06   0.0165 (rotor 0.0080)
+  q4    HG-KR053    4.500e-06     3.647e-06   8.147e-06     1.81   0.0003 (rotor 0.0002)
+  largest single part: D_GT3M_120T_W9_D8 of q1, 6.73e-06 kg m^2 at the motor
+
+Check 1. Pen tip, Simscape against RPRRdir: largest distance 6.51e-13 mm
+
+Check 2. Three poses, Simscape against Fusion (q in deg, mm, deg, deg):
+  pose                             q3 gravity [N m]       q4 gravity [N m] inertia about q1 [kg m^2]
+  [20 60 30 -60]                0.61985    0.61985    0.001500   0.001500     0.080444    0.080444
+  [-45 120 -40 90]              0.54355    0.54355    0.001114   0.001114     0.106711    0.106711
+  [100 20 50 30]                0.46090    0.46090    0.000301   0.000301     0.067026    0.067026
+  largest relative difference: 4.5e-10
+
+Joint loads, payload 1 kg: Simscape (CAD bodies) against MATLAB (point masses)
+  joint     peak MATLAB   peak Simscape     largest diff.    from gravity     from motion
+  q1          4.999 N m       5.024 N m        0.101 N m       0.000 N m       0.101 N m
+  q2         12.449 N        12.456 N          0.940 N         0.000 N         0.940 N  
+  q3          7.303 N m       7.304 N m        0.010 N m       0.002 N m       0.009 N m
+  q4          0.863 N m       0.863 N m        0.000 N m       0.000 N m       0.000 N m
+  gravity part at q3 = -m g y sin(q3) (q3 body, m = 0.7723 kg, y = -0.5 mm above the link line): up to 0.002 N m
+                     + axial moment residual from the point-mass model: up to 0.0e+00 N m
+    Simscape against these two terms: largest difference 9.3e-15 N m; at q4: 6.1e-16 N m
+  gravity part at q1 and q2: 3.6e-15 N m, 2.0e-14 N (none expected: vertical axis, horizontal rail)
+  inertia about the q1 axis over the cycle, payload 1 kg: point masses 0.1752 to 0.2499 kg m^2, CAD bodies 0.1765 to 0.2512
+    CAD minus points: +0.0013 to +0.0015 kg m^2 (+0.5% to +0.8%); times qdd1 it leaves 0.101 N m of the q1 difference (terms with the speeds and accelerations of the other joints)
+    formulas checked: CAD against Fusion 7.1e-11, points against step 5's mass matrix 4.2e-16 (relative)
+  for comparison, the q1 drive (rotor + transmission) seen at the joint: 0.0329 kg m^2
+
+Motor torques, payload 1 kg [N m]
+  joint   peak MATLAB   peak Simscape    diff. from bodies diff. from transmission
+  q1         0.1045          0.1136               0.0020                 0.0086
+  q2         0.0255          0.0302               0.0015                 0.0047
+  q3         0.1667          0.1707               0.0002                 0.0040
+  q4         0.1446          0.1454               0.0001                 0.0007
+  equivalent rotor torque against J_r*qdd/tau, per joint: 1.5e-33 3.5e-18 1.7e-18 2.2e-19 N m (1e-31 3e-16 2e-16 1e-16 relative)
+    q4: slider-mounted rotor driven at 6*qdd4 + 3*qdd3: 2.2e-19 N m
+
+Motor use (RMS/rated, peak/max; must be <= 0.8 with our margin)
+  joint motor     payload     MATLAB (step 5)   CAD bodies, rotor only    CAD bodies + drives
+  q1    HG-KR053   1.0 kg      0.20 / 0.19             0.20 / 0.19             0.21 / 0.20
+  q2    HG-KR053   1.0 kg      0.02 / 0.05             0.02 / 0.05             0.03 / 0.05
+  q3    HG-KR053   1.0 kg      0.54 / 0.30             0.54 / 0.30             0.54 / 0.30
+  q4    HG-KR053   1.0 kg      0.45 / 0.26             0.45 / 0.26             0.45 / 0.26
+  q1    HG-KR053   0.2 kg      0.10 / 0.10             0.10 / 0.10             0.12 / 0.11
+  q2    HG-KR053   0.2 kg      0.02 / 0.03             0.02 / 0.03             0.02 / 0.04
+  q3    HG-KR053   0.2 kg      0.19 / 0.10             0.19 / 0.10             0.19 / 0.11
+  q4    HG-KR053   0.2 kg      0.09 / 0.05             0.09 / 0.05             0.09 / 0.05
+  all within 0.8 in Simscape: yes
+
+Saved robot_rprr_cad.slx, step7b_simscape_cad.mat, figures/step7b_joint_loads.png and figures/step7b_motor_torques.png

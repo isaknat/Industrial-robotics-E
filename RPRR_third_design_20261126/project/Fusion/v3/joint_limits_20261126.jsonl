@@ -1,0 +1,9 @@
+{"limit": 0.0, "hit": null, "checks": 40, "note": "no collision up to the search bound", "joint": "q2", "side": "lower", "seconds": 160.6}
+{"limit": 141.0, "first_collision": 141.062, "checks": 36, "hit": {"D_02:D_Q2_Front_buffer | D_03:D_MGN12H_Block": 2.625}, "joint": "q2", "side": "upper", "seconds": 131.0}
+{"limit": -42.562, "first_collision": -42.625, "checks": 27, "hit": {"D_03:D_Q3_Lower_stop | D_04:D_Q3_Shaft_15": 0.012}, "joint": "q3", "side": "lower", "seconds": 100.6}
+{"limit": 45.562, "first_collision": 45.625, "checks": 28, "hit": {"D_03:D_Q3_Upper_stop | D_04:D_Q3_Shaft_15": 0.012}, "joint": "q3", "side": "upper", "seconds": 102.4}
+{"limit": -132.562, "first_collision": -132.625, "checks": 72, "hit": {"D_04:D_Q3_Link_40x40x3 | D_05:D_Q4_Pen": 0.0}, "joint": "q4", "side": "lower", "seconds": 310.6}
+{"limit": 132.562, "first_collision": 132.625, "checks": 72, "hit": {"D_04:D_Q3_Link_40x40x3 | D_05:D_Q4_Pen": 0.0}, "joint": "q4", "side": "upper", "seconds": 305.1}
+{"limit": -180.0, "hit": null, "checks": 45, "note": "no collision up to the search bound", "joint": "q1", "side": "lower", "seconds": 302.3}
+{"limit": 167.938, "first_collision": 168.0, "checks": 48, "hit": {"D_02/D_03:D_Motor_flange | D_02:D_Q2_Motor_foot": 59.218}, "joint": "q1", "side": "upper", "seconds": 341.5}
+{"joint": "q1", "side": "upper", "note": "168 deg hit is between two parts that are rigid with each other; rest checked one by one", "poses": {"168": {"D_02/D_03:D_Motor_flange | D_02:D_Q2_Motor_foot": 59.21762662408117}, "170": {}, "174": {}, "176": {}, "178": {}, "180": {}}}

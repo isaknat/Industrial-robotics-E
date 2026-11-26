@@ -1,0 +1,9 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "author": "Industrial Robotics",
+  "description": {"": "Play the E writing trajectory in the active RPRR writing assembly."},
+  "version": "1.0.0",
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}

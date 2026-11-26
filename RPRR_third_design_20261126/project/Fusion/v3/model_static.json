@@ -1,0 +1,77 @@
+{
+ "at_reference": false,
+ "joint_values": {
+  "q1_Base_yaw": 0.0,
+  "q2_Radial_slide": -11.171221003579063,
+  "q3_Shoulder_pitch": 0.0,
+  "q4_Wrist_pitch": 0.0,
+  "spin_q4_transfer_on_arm": 0.0
+ },
+ "timeline": 1452,
+ "not_healthy": [],
+ "interference_reference": {},
+ "parts_touching_nothing": [
+  "D_05_Pen_head:1+D_Q4_Pen_return_spring:1"
+ ],
+ "instances": 213,
+ "kinds": 109,
+ "masses_kg": {
+  "D_01": 5.5674,
+  "D_02": 2.8771,
+  "D_03": 2.6125,
+  "D_04": 0.7723,
+  "D_05": 0.067,
+  "Wave": 4.7843
+ },
+ "spinning_table": true,
+ "joints": [
+  "q1_Base_yaw",
+  "q2_Radial_slide",
+  "q3_Shoulder_pitch",
+  "q4_Wrist_pitch",
+  "spin_q4_transfer_on_arm",
+  "spin_q1_intermediate",
+  "spin_q1_input",
+  "q2_Screw_spin",
+  "spin_q3_intermediate",
+  "spin_q3_input",
+  "spin_q4_carrier",
+  "spin_q4_input",
+  "Pen_pin_press_fit",
+  "Pen_compliance"
+ ],
+ "motion_links": [
+  [
+   "q2_Lead_10mm_per_turn",
+   0
+  ],
+  [
+   "link_q3_intermediate",
+   0
+  ],
+  [
+   "link_q3_input",
+   0
+  ],
+  [
+   "link_q1_intermediate",
+   0
+  ],
+  [
+   "link_q1_input",
+   0
+  ],
+  [
+   "link_q4_transfer",
+   0
+  ],
+  [
+   "link_q4_carrier",
+   0
+  ],
+  [
+   "link_q4_input",
+   0
+  ]
+ ]
+}

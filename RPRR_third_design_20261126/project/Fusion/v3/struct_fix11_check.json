@@ -1,0 +1,258 @@
+{
+ "poses": [
+  {
+   "q": [
+    0,
+    80,
+    0,
+    0
+   ],
+   "collisions": {},
+   "screw_turn_deg": 0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "collisions": {},
+   "screw_turn_deg": -0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    141,
+    0,
+    0
+   ],
+   "collisions": {},
+   "screw_turn_deg": -36.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    141,
+    45,
+    -90
+   ],
+   "collisions": {},
+   "screw_turn_deg": -36.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    115,
+    -42,
+    90
+   ],
+   "collisions": {},
+   "screw_turn_deg": 180.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    60,
+    -42,
+    0
+   ],
+   "collisions": {},
+   "screw_turn_deg": 0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    100,
+    45.5,
+    0
+   ],
+   "collisions": {},
+   "screw_turn_deg": -0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    100,
+    -42.5,
+    0
+   ],
+   "collisions": {},
+   "screw_turn_deg": -0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    70,
+    20,
+    0
+   ],
+   "collisions": {},
+   "screw_turn_deg": -0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    90,
+    20,
+    20,
+    -45
+   ],
+   "collisions": {},
+   "screw_turn_deg": -0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    -90,
+    80,
+    0,
+    0
+   ],
+   "collisions": {},
+   "screw_turn_deg": 0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    -11.9,
+    24.3,
+    -13.1,
+    -34.9
+   ],
+   "collisions": {},
+   "screw_turn_deg": -154.8,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    80,
+    0,
+    131
+   ],
+   "collisions": {},
+   "screw_turn_deg": 0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    80,
+    0,
+    -131
+   ],
+   "collisions": {},
+   "screw_turn_deg": 0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    45,
+    100,
+    30,
+    -60
+   ],
+   "collisions": {},
+   "screw_turn_deg": -0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    0,
+    20,
+    30,
+    -60
+   ],
+   "collisions": {},
+   "screw_turn_deg": -0.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    25,
+    33.5,
+    -30,
+    100
+   ],
+   "collisions": {},
+   "screw_turn_deg": -126.0,
+   "screw_off_axis_mm": 0.0
+  },
+  {
+   "q": [
+    -25,
+    127.5,
+    30,
+    -60
+   ],
+   "collisions": {},
+   "screw_turn_deg": 90.0,
+   "screw_off_axis_mm": 0.0
+  }
+ ],
+ "screw_link_ok": true,
+ "gap_to_seat_mm": {
+  "D_M3x10_rail_screw:1": 0.0,
+  "D_M3x10_rail_screw:2": 0.0,
+  "D_M3x10_rail_screw:3": 0.0,
+  "D_M3x10_rail_screw:4": 0.0,
+  "D_M3x10_rail_screw:5": 0.0,
+  "D_M3x10_rail_screw:6": 0.0,
+  "D_M3x10_rail_screw:7": 0.0,
+  "D_M3x10_rail_screw:8": 0.0,
+  "D_M3x10_rail_screw:9": 0.0,
+  "D_M3x10_rail_screw:10": 0.0,
+  "D_M6x25_socket_screw:3": 0.0,
+  "D_M6x25_socket_screw:4": 0.0,
+  "D_M6x25_socket_screw:5": 0.0,
+  "D_M6x25_socket_screw:6": 0.0,
+  "D_Bearing_606ZZ:1": 0.0,
+  "D_EK08_Fixed_support:2": 0.0,
+  "D_EF08_End_support:1": 0.0,
+  "D_Q2_Support_riser:2": 0.0,
+  "D_Q2_Support_riser:3": 0.0,
+  "D_Q2_Ballscrew_12x10:1": 0.0,
+  "D_Retaining_ring_6:16": 0.0,
+  "D_RN8_Lock_nut - D_EK08_Fixed_support": 0.0,
+  "D_RN8_Lock_nut - D_Q2_Ballscrew_12x10": 0.0,
+  "D_XGT2_19C_8x6 - D_Q2_Ballscrew_12x10": 0.0,
+  "D_XGT2_19C_8x6 - D_HG_KR053": 0.0,
+  "D_HG_KR053 - D_Motor_flange": 0.0,
+  "D_Motor_flange - D_Q2_Motor_foot": 0.0,
+  "D_Q2_Motor_foot - D_Q2_Rail_plate": 0.0
+ },
+ "timeline": 1452,
+ "not_healthy": [],
+ "kinds": 109,
+ "instances": 213,
+ "masses_kg": {
+  "D_01": 5.5674,
+  "D_02": 2.8771,
+  "D_03": 2.6125,
+  "D_04": 0.7723,
+  "D_05": 0.067,
+  "Wave": 4.7843
+ },
+ "part_masses_g": {
+  "D_Q3_Link_40x40x3": 284.28,
+  "D_Q2_Ballscrew_12x10": 178.44,
+  "D_MGN12_Rail": 167.86,
+  "D_EK08_Fixed_support": 233.74,
+  "D_EF08_End_support": 121.26,
+  "D_Bearing_606ZZ": 8.74,
+  "D_Q2_Support_riser": 9.28,
+  "D_Q2_Rail_plate": 835.96,
+  "D_M3x10_rail_screw": 1.05,
+  "D_M6x25_socket_screw": 8.74
+ },
+ "export": true
+}
